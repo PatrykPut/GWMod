@@ -1,5 +1,9 @@
 {
   "itemGroup.gwtab": "Gunpowder Weaponry",
   "item.gw.iron_shot_item": "Iron Shot",
-  "item.gw.basic_musket": "Basic Musket"
+  "item.gw.basic_musket": "Basic Musket",
+  "item.gw.amber": "Amber",
+
+  "block.gw.amber_block": "Amber Block",
+  "block.gw.amber_ore": "Amber Ore"
 }

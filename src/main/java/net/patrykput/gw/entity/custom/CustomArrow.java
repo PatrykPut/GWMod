@@ -6,6 +6,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.network.NetworkHooks;
 
@@ -14,7 +15,7 @@ public class CustomArrow extends AbstractArrow {
 
     public CustomArrow(EntityType<CustomArrow> type, double x, double y, double z, Level world) {
         super(type, world);
-        this.setBaseDamage(10.0D);
+        this.setBaseDamage(20.0D);
         this.setNoGravity(true);
     }
 
@@ -31,7 +32,7 @@ public class CustomArrow extends AbstractArrow {
         super.tick();
 
         Vec3 vec3d = this.getDeltaMovement();
-        double speed = 2.0D;
+        double speed = 6.0D;
         this.setDeltaMovement(vec3d.scale(speed));
     }
 
@@ -42,6 +43,13 @@ public class CustomArrow extends AbstractArrow {
     @Override
     public Packet<?> getAddEntityPacket() {
         return NetworkHooks.getEntitySpawningPacket(this);
+    }
+    @Override
+    protected void onHit(HitResult hitResult) {
+        super.onHit(hitResult);
+        if (!this.level.isClientSide) {
+            this.remove(RemovalReason.KILLED);
+        }
     }
 }
 
