@@ -11,6 +11,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.patrykput.gw.block.ModBlocks;
 import net.patrykput.gw.entity.ModEntities;
 import net.patrykput.gw.entity.custom.CustomArrowRenderer;
 import net.patrykput.gw.item.ModItems;
@@ -28,6 +29,7 @@ public class GW {
 
         ModItems.ITEMS.register(modEventBus);
         ModEntities.ENTITIES.register(modEventBus);
+        ModBlocks.BLOCKS.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::doClientStuff);
