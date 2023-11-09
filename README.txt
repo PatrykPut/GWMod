@@ -4,3 +4,4 @@ Liste:
 - cannon
 - holy cross
 - amber ring
+- cross zum aufstellen
