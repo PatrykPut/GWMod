@@ -8,6 +8,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.Level;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import org.jetbrains.annotations.Nullable;
@@ -21,7 +22,7 @@ public class HolyCross extends SwordItem {
 
    @Mod.EventBusSubscriber(modid = "gw")
    public static class MyModEventHandlers {
-        @SubscribeEvent
+        @SubscribeEvent(priority = EventPriority.HIGH)
        public void onLivingHurt(LivingHurtEvent event){
             if (event.getSource().getDirectEntity() instanceof Player) {
                 Player player = (Player) event.getSource().getDirectEntity();
