@@ -3,4 +3,4 @@ Liste:
 - Muskete
 - cannon
 - holy cross
-- 
+- amber ring
