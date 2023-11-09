@@ -1,3 +1,19 @@
 {
-
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " + ",
+    "+#+",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:gold_block"
+  },
+    "+": {
+      "item": "gw:amber_block"
+    }
+  },
+  "result": {
+    "item": "gw:holy_cross"
+  }
 }

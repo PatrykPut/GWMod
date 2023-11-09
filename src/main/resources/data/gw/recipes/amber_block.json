@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "gw:amber"
+    }
+  },
+  "result": {
+    "item": "gw:amber_block"
+  }
+}
