@@ -5,3 +5,4 @@ Liste:
 - holy cross
 - amber ring
 - cross zum aufstellen
+- amberspeer
