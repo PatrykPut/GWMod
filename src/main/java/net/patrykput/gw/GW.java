@@ -15,6 +15,8 @@ import net.patrykput.gw.block.ModBlocks;
 import net.patrykput.gw.entity.ModEntities;
 import net.patrykput.gw.entity.custom.CustomArrowRenderer;
 import net.patrykput.gw.item.ModItems;
+import net.patrykput.gw.world.feature.ModConfiguredFeatures;
+import net.patrykput.gw.world.feature.ModPlacedFeatures;
 import org.slf4j.Logger;
 
 @Mod(GW.MOD_ID)
@@ -30,6 +32,9 @@ public class GW {
         ModItems.ITEMS.register(modEventBus);
         ModEntities.ENTITIES.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
+
+        ModConfiguredFeatures.register(modEventBus);
+        ModPlacedFeatures.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::doClientStuff);
